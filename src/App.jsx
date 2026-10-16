@@ -6,7 +6,7 @@ function App() {
     const [page, setPage] = useState("Home");
 
     return (
-        <div>
+        <div className="portfolio">
             <header>
                 <h2>My Portfolio</h2>
 
@@ -20,36 +20,61 @@ function App() {
 
             <main>
                 {page === "Home" && (
-                    <section>
-                        <div className="cartoon">🐰</div>
-                        <h1>Hi, I'm Gwyneth!</h1>
-                        <h3>Welcome to my personal website.</h3>
-                        <p>
-                            I am a student who enjoys learning new things
-                            and exploring my interests.
-                        </p>
-                        <button className="pink-button"
-                            onClick={() => setPage("About")}>
-                            About Me
-                        </button>
+                    <section className="home">
+                        <div className="home-text">
+                            <p className="welcome">WELCOME TO MY PORTFOLIO</p>
+
+                            <h1>Hi there, I'm Gwyneth!</h1>
+
+                            <h3>Student & Future Web Developer</h3>
+
+                            <p className="intro">
+                                I enjoy learning new things, exploring
+                                technology, and creating simple and
+                                beautiful websites.
+                            </p>
+
+         <button
+             className="pink-button"
+             onClick={() => setPage("About")}
+>
+             About Me
+         </button>
+
+                        </div>
+
+                        <div className="photo-area">
+                            <div className="photo-frame">
+                                <img
+                                    src="src/871dc8cf-389c-4219-9cc9-624fbc1cd89a.jpg"
+                                    alt="Gwyneth's photo"
+                                />
+                            </div>
+                        </div>
                     </section>
                 )}
 
                 {page === "About" && (
                     <section>
                         <div className="cartoon">🐱</div>
+
                         <h1>About Me</h1>
+
                         <p>
                             Hello! I'm Gwyneth, a student interested
                             in technology and web design.
                         </p>
+
                         <p>
                             I enjoy learning, being creative, and
                             improving my skills through projects.
                         </p>
 
                         <h3>My Interests</h3>
-                        <p>Web Design · Music · Technology · Creativity</p>
+
+                        <p>
+                            Web Design · Music · Technology · Creativity
+                        </p>
                     </section>
                 )}
 
@@ -80,21 +105,28 @@ function App() {
                 {page === "Connect" && (
                     <section>
                         <div className="cartoon">💌</div>
+
                         <h1>Connect With Me</h1>
+
                         <p>Thank you for visiting my website!</p>
+
                         <p>You can find me on these platforms.</p>
 
                         <div className="socials">
-                            <a href="https://www.facebook.com/"
-                               target="_blank" rel="noreferrer">
+                            <a
+                                href="https://www.facebook.com/"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
                                 Facebook
                             </a>
-                            <a href="https://www.instagram.com/"
-                               target="_blank" rel="noreferrer">
-                                Instagram
-                            </a>
-                            <a href="https://github.com/"
-                               target="_blank" rel="noreferrer">
+
+                        
+                            <a
+                                href="https://github.com/"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
                                 GitHub
                             </a>
                         </div>
